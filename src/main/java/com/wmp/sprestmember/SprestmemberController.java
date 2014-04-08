@@ -1,4 +1,4 @@
-package com.wmp.user;
+package com.wmp.sprestmember;
 
 import java.awt.List;
 
@@ -9,22 +9,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.wmp.user.model.User;
-import com.wmp.user.service.UserService;
+import com.wmp.sprestmember.model.Sprestmember;
+import com.wmp.sprestmember.model.User;
+import com.wmp.sprestmember.service.SprestmemberService;
 
 
 
 @Controller
-public class UsersController {
+public class SprestmemberController {
 	
 	@Autowired
-	private UserService userService;
+	private SprestmemberService sprestmemberService;
 	
-	@RequestMapping(value="/users/{userId}", method=RequestMethod.GET)
+	@RequestMapping(value="/sprestmember/{s_no}", method=RequestMethod.GET)
 	@ResponseBody
-	public User getItem(@PathVariable("userId") String userId) {
+	public Sprestmember getItem(@PathVariable("s_no") int s_no) {
 		
-	    return userService.getUserByEmail(userId);
+	    return sprestmemberService.getByS_no(s_no);
 	}
 //
 //	@RequestMapping(value="/users", method=RequestMethod.GET)

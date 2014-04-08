@@ -12,11 +12,11 @@
 	</settings>
 
     <typeAliases>  
-        <typeAlias type="com.wmp.user.model.User" alias="User" />
+        <typeAlias type="com.wmp.sprestmember.model.Sprestmember" alias="Sprestmember" />
     </typeAliases>
      
     <mappers>  
-        <mapper resource="mybatis/mysql/userMapper.xml" />
+        <mapper resource="mybatis/mysql/sprestMapper.xml" />
     </mappers>
     
 </configuration> 
